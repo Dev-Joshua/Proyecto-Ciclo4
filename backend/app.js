@@ -5,11 +5,11 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 //Declaro una variable con mi base de datos
 var database = require("./config/database");
+var auth = require("./auth/main_auth");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
 var personasRouter = require("./routes/personas.router");
 var mascotasRouter = require("./routes/mascotas.router");
+var usuariosRouter = require("./routes/usuarios.router");
 
 var app = express();
 
@@ -20,10 +20,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 //Mongo connect
 database.mongoConnect();
+app.use("/usuarios", usuariosRouter);
+app.use(auth);
 
 //Routers
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/personas", personasRouter);
 app.use("/mascotas", mascotasRouter);
 
