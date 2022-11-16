@@ -1,73 +1,69 @@
 import React from "react";
 import Navbar from "../navbar/navbar";
+import "./register.css";
+import Background from "../../assets/img/foto_fondo2.jpg";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 export default class register extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
-  state = {};
   render() {
     return (
       <>
         <Navbar />
-        <main>
+        <main style={{ backgroundImage: `url(${Background})` }}>
           <section class="container-main">
             <section class="register">
               <div class="icon-closed">
-                {/* <a href="../index.html">
-                  <img src={Closed} width="40px" height="40px" alt="cerrar">
-                </a> */}
-                {/* <FontAwesomeIcon icon={faCircleXmark} /> */}
+                <a href="../login">
+                  <FontAwesomeIcon icon={faCircleXmark} />
+                </a>
               </div>
               <div class="register-container">
                 <div class="title">
                   <h2>Crear cuenta</h2>
                 </div>
                 <form onsubmit="registerUser(event)">
-                  <div class="contact-details">
-                    <div>
-                      <label for="">Nombre</label>
-                      <input
-                        id="name_input"
-                        type="text"
-                        placeholder=""
-                        required
-                        autofocus
-                      />
-                      <label class="city" for="">
-                        Ciudad
-                      </label>
-                      <input
-                        id="city_input"
-                        type="text"
-                        placeholder=""
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label class="last-name" for="">
-                        Apellido
-                      </label>
-                      <input
-                        id="lastname_input"
-                        type="text"
-                        placeholder=""
-                        required
-                      />
-                      <label for="" type="tel">
-                        Teléfono
-                      </label>
-                      <input
-                        id="phone_input"
-                        type="text"
-                        placeholder=""
-                        required
-                      />
-                    </div>
-                  </div>
                   <div class="second-details">
+                    <label for="">Nombre</label>
+                    <input
+                      id="name_input"
+                      type="text"
+                      placeholder=""
+                      required
+                      autofocus
+                    />
+                    <label class="city" for="">
+                      Ciudad
+                    </label>
+                    <input
+                      id="city_input"
+                      type="text"
+                      placeholder=""
+                      required
+                    />
+
+                    <label class="last-name" for="">
+                      Apellido
+                    </label>
+                    <input
+                      id="lastname_input"
+                      type="text"
+                      placeholder=""
+                      required
+                    />
+                    <label for="" type="tel">
+                      Teléfono
+                    </label>
+                    <input
+                      id="phone_input"
+                      type="text"
+                      placeholder=""
+                      required
+                    />
                     <label for="">Dirección</label>
                     <input
                       id="address_input"
@@ -101,8 +97,8 @@ export default class register extends React.Component {
                       required
                     />
                   </div>
-                  <button type="submit">
-                    <a onclick="registerUser()">Registrarse</a>
+                  <button style={{ marginTop: 50 }} type="submit">
+                    <a href="../register/register.js">Registrarse</a>
                   </button>
                 </form>
               </div>

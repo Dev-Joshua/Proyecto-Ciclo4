@@ -2,20 +2,35 @@ import React from "react";
 import Navbar from "../navbar/navbar";
 // import { Button, Form, Container } from "react-bootstrap";
 import "./login.css";
+import Background from "../../assets/img/principal.jpg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 // import Logo from "../../assets/logos/logo2.png";
 
 export default class login extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  showHide() {
+    const password = document.getElementById("password");
+    const toggle = document.getElementById("toggle");
+    if (password.type === "password") {
+      password.setAttribute("type", "text");
+      toggle.classList.add("hide");
+    } else {
+      password.setAttribute("type", "password");
+      toggle.classList.remove("hide");
+    }
+  }
   render() {
     return (
       <>
         <Navbar />
-        <main>
+        <main style={{ backgroundImage: `url(${Background})` }}>
           <section className="container-main">
             <section className="texto-login">
-              <img src="./logo2.png" alt="" />
               <h1 className="texto-login-ani">Bienvenidos</h1>
               <p>WEB dedicada a encontrar su mascota perdida.</p>
             </section>
@@ -37,13 +52,20 @@ export default class login extends React.Component {
                   id="password"
                   required
                 />
-                <div id="toggle"></div>
+                <div
+                  id="toggle"
+                  onClick={() => {
+                    this.showHide();
+                  }}
+                >
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </div>
                 <button type="submit">
                   <a href="../login/login.js">Iniciar sesión</a>
                 </button>
                 <h3>¿Aún no tienes cuenta?</h3>
                 <button>
-                  <a href="../register/register.js">Regístrate</a>
+                  <a href="../register">Regístrate</a>
                 </button>
               </form>
             </section>

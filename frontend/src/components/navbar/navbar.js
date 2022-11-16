@@ -6,13 +6,14 @@ import Logo from "../../assets/logos/logo2.png";
 export default class navbar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
   state = {};
   render() {
     return (
       <Navbar expand="lg" variant="light" bg="dark">
         <nav>
-          <a href="./login.js">
+          <a href="../login">
             <img src={Logo} alt="logo" />
           </a>
         </nav>
