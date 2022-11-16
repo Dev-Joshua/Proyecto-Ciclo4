@@ -15,3 +15,5 @@ const auth = (req, res, next) => {
 module.exports = auth;
 
 //El jwt permite generar un token
+//Para hacer un proceso de autorizacion necesito colocarlo en el headers para poder abrir lo que necesito
+//Hasta que no tenga el token no podre acceder y ver la informacion de mi bd

@@ -1,0 +1,23 @@
+header {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+}
+
+header {
+  margin: 0;
+  width: 100%;
+}
+
+nav img {
+  width: 180px;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  display: flex;
+}
+
+nav {
+  height: 90px;
+  width: 100%;
+}
