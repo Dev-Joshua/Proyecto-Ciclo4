@@ -39,11 +39,11 @@ export default class login extends React.Component {
                 />
                 <div id="toggle"></div>
                 <button type="submit">
-                  <a href="../../components/login/login.js">Iniciar sesión</a>
+                  <a href="../login/login.js">Iniciar sesión</a>
                 </button>
                 <h3>¿Aún no tienes cuenta?</h3>
                 <button>
-                  <a href="./html/register.html">Regístrate</a>
+                  <a href="../register/register.js">Regístrate</a>
                 </button>
               </form>
             </section>
