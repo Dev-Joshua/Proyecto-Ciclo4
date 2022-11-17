@@ -2,6 +2,8 @@ import React from "react";
 import Navhome from "../navhome/navhome";
 import "./home.css";
 import AddIcon from "../../assets/icon/add-anuncio - color.png";
+import CardImg from "../../assets/img/4.jpg";
+import Background from "../../assets/img/home.jpg";
 
 export default class home extends React.Component {
   constructor(props) {
@@ -13,7 +15,11 @@ export default class home extends React.Component {
     return (
       <>
         <Navhome />
-        <main>
+        <main
+          style={{
+            backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${Background})`,
+          }}
+        >
           <section class="filtro-add">
             <div class="order-container">
               <label for="order">Ordenar:</label>
@@ -32,12 +38,7 @@ export default class home extends React.Component {
           {/* Cards */}
           <section class="cards-ads" id="cards-ads">
             <article class="card-pet">
-              <div
-                style={{
-                  backgroundImage: `url("https://revista.weepec.com/wp-content/uploads/2019/07/chihuahua-in-studio-BVACJ8D.jpg")`,
-                }}
-                alt="img"
-              ></div>
+              <img src={CardImg} alt="img" />
               <div class="card-body">
                 <h3>Brandom Tercero</h3>
                 <table>
@@ -101,12 +102,7 @@ export default class home extends React.Component {
               </div>
             </article>
             <article class="card-pet">
-              <div
-                style={{
-                  backgroundImage: `url("https://revista.weepec.com/wp-content/uploads/2019/07/chihuahua-in-studio-BVACJ8D.jpg")`,
-                }}
-                alt="img"
-              ></div>
+              <img src={CardImg} alt="img"></img>
               <div class="card-body">
                 <h3>Brandom Tercero</h3>
                 <table>
