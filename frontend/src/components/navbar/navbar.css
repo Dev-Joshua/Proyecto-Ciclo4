@@ -1,22 +1,11 @@
-header {
-  margin: 0;
-  font-family: "Quicksand", sans-serif;
-  outline: none;
-}
-
-header {
-  margin: 0;
-  width: 100%;
-}
-
-nav img {
-  width: 180px;
+nav a img {
+  width: 150px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
 }
 
 nav {
-  height: 90px;
+  height: 70px;
   width: 100%;
 }

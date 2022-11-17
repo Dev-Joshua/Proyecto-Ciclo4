@@ -214,6 +214,12 @@ input::placeholder {
   margin-top: 10px;
   width: 100%;
 }
+.button:hover,
+.button a:hover {
+  background-color: var(--label);
+  animation: 0.1s ease-in;
+  color: #000000;
+}
 
 .button a {
   text-decoration: none;

@@ -61,7 +61,7 @@ export default class login extends React.Component {
                   <FontAwesomeIcon icon={faEyeSlash} />
                 </div>
                 <button className="button" type="submit">
-                  <a href="../login/login.js">Iniciar sesión</a>
+                  <a href="../beginning">Iniciar sesión</a>
                 </button>
                 <h3>¿Aún no tienes cuenta?</h3>
                 <button className="button">

@@ -92,7 +92,7 @@ export default class register extends React.Component {
                   </div>
                   <button
                     className="button"
-                    style={{ marginTop: 50 }}
+                    style={{ marginTop: 30 }}
                     type="submit"
                   >
                     <a href="../register/register.js">Registrarse</a>

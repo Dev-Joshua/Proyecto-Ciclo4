@@ -25,19 +25,20 @@ html {
 /* Header */
 .nav {
   display: flex;
-  align-content: center;
+  /* align-content: center; */
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 90px;
+  height: 70px;
   width: 100%;
   background-color: #212529;
+  align-items: center;
 }
 
 nav img {
-  width: 180px;
+  width: 150px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
 }
 
@@ -70,7 +71,7 @@ nav img {
 .container-list ul li a {
   color: var(--label);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container-list ul li a:hover {
@@ -86,7 +87,7 @@ nav img {
 }
 
 .profile-image img {
-  width: 60px;
+  width: 50px;
   margin-bottom: 30px;
 }
 

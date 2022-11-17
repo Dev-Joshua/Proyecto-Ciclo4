@@ -6,6 +6,7 @@ import Login from "../login/login";
 import Image from "../../assets/img/404.jpg";
 import Navbar from "../navbar/navbar";
 import Home from "../beginning/home";
+import Add from "../add-ad/add_ad";
 
 export default function AppRouter() {
   return (
@@ -15,6 +16,7 @@ export default function AppRouter() {
         <Route exact path="/" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/home" element={<Home />} />
+        <Route exact path="/add_ad" element={<Add />} />
         <Route
           path="/*"
           element={
