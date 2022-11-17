@@ -10,16 +10,16 @@ export default class nav extends React.Component {
   }
   render() {
     return (
-      <nav class="nav">
+      <nav className="nav">
         <a href="../beginning">
           <img src={Logo} alt="logo" />
         </a>
         <input type="checkbox" id="menu-check" />
-        <label id="menu" for="menu-check">
+        <label id="menu" htmlFor="menu-check">
           <span id="menu-abrir">&#9776;</span>
           <span id="menu-cerrar">X</span>
         </label>
-        <div class="container-list">
+        <div className="container-list">
           <ul>
             <li>
               <a href="./home.html">Inicio</a>
@@ -29,12 +29,12 @@ export default class nav extends React.Component {
             </li>
           </ul>
         </div>
-        <div class="container-account">
-          <div class="profile-image">
+        <div className="container-account">
+          <div className="profile-image">
             <img src={ProfileIcon} alt="icon-profile" />
           </div>
-          <ul class="profile-list">
-            <span class="profile-name" type="text">
+          <ul className="profile-list">
+            <span className="profile-name" type="text">
               Nombre
             </span>
             <li>

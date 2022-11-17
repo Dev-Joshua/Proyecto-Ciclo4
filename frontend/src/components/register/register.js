@@ -15,30 +15,27 @@ export default class register extends React.Component {
       <>
         <Navbar />
         <main style={{ backgroundImage: `url(${Background})` }}>
-          <section class="container-main">
-            <section class="register">
-              <div class="icon-closed">
+          <section className="container-main">
+            <section className="register">
+              <div className="icon-closed">
                 <a href="../login">
                   <FontAwesomeIcon icon={faCircleXmark} />
                 </a>
               </div>
-              <div class="register-container">
-                <div class="title">
+              <div className="register-container">
+                <div className="title">
                   <h2>Crear cuenta</h2>
                 </div>
-                <form onsubmit="registerUser(event)">
-                  <div class="second-details">
-                    <label for="">Nombre</label>
+                <form style={{ marginTop: 30 }} onSubmit="registerUser(event)">
+                  <div className="second-details">
+                    <label>Nombre</label>
                     <input
                       id="name_input"
                       type="text"
                       placeholder=""
                       required
-                      autofocus
                     />
-                    <label class="city" for="">
-                      Ciudad
-                    </label>
+                    <label className="city">Ciudad</label>
                     <input
                       id="city_input"
                       type="text"
@@ -46,58 +43,58 @@ export default class register extends React.Component {
                       required
                     />
 
-                    <label class="last-name" for="">
-                      Apellido
-                    </label>
+                    <label className="last-name">Apellido</label>
                     <input
                       id="lastname_input"
                       type="text"
                       placeholder=""
                       required
                     />
-                    <label for="" type="tel">
-                      Teléfono
-                    </label>
+                    <label type="tel">Teléfono</label>
                     <input
                       id="phone_input"
                       type="text"
                       placeholder=""
                       required
                     />
-                    <label for="">Dirección</label>
+                    <label>Dirección</label>
                     <input
                       id="address_input"
-                      class="second-input"
+                      className="second-input"
                       type="text"
                       placeholder=""
                       required
                     />
-                    <label for="">Email</label>
+                    <label>Email</label>
                     <input
                       id="email_input"
-                      class="second-input"
+                      className="second-input"
                       type="email"
                       placeholder=""
                       required
                     />
-                    <label for="">Contraseña</label>
+                    <label>Contraseña</label>
                     <input
                       id="pass_input"
-                      class="second-input"
+                      className="second-input"
                       type="password"
                       placeholder="*********"
                       required
                     />
-                    <label for="">Confirmar contraseña</label>
+                    <label>Confirmar contraseña</label>
                     <input
                       id="repeat_pass_input"
-                      class="second-input"
+                      className="second-input"
                       type="password"
                       placeholder="*********"
                       required
                     />
                   </div>
-                  <button style={{ marginTop: 50 }} type="submit">
+                  <button
+                    className="button"
+                    style={{ marginTop: 50 }}
+                    type="submit"
+                  >
                     <a href="../register/register.js">Registrarse</a>
                   </button>
                 </form>

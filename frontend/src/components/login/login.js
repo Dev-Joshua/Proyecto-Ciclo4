@@ -36,7 +36,7 @@ export default class login extends React.Component {
             </section>
             <section className="login">
               <form id="form">
-                <label>Email</label>
+                <label className="labelLogin">Email</label>
                 <input
                   id="email"
                   name="email"
@@ -44,7 +44,7 @@ export default class login extends React.Component {
                   placeholder="yourUser@example.com"
                   required
                 />
-                <label>Contraseña</label>
+                <label className="labelLogin">Contraseña</label>
                 <input
                   name="password"
                   type="password"
@@ -60,11 +60,11 @@ export default class login extends React.Component {
                 >
                   <FontAwesomeIcon icon={faEyeSlash} />
                 </div>
-                <button type="submit">
+                <button className="button" type="submit">
                   <a href="../login/login.js">Iniciar sesión</a>
                 </button>
                 <h3>¿Aún no tienes cuenta?</h3>
-                <button>
+                <button className="button">
                   <a href="../register">Regístrate</a>
                 </button>
               </form>

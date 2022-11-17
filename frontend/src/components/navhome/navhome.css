@@ -51,6 +51,8 @@ nav img {
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  position: relative;
+  right: -200px;
   /* margin-left: 60vh;  Se tiene problema con el margin*/
 }
 
@@ -58,8 +60,6 @@ nav img {
   display: flex;
   justify-content: space-between;
   width: 250px;
-  font-weight: bold;
-  margin-left: 500px;
   margin-bottom: 0px;
 }
 
