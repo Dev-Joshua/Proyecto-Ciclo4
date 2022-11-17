@@ -5,6 +5,7 @@ import Register from "../register/register";
 import Login from "../login/login";
 import Image from "../../assets/img/404.jpg";
 import Navbar from "../navbar/navbar";
+import Home from "../beginning/home";
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/home" element={<Home />} />
         <Route
           path="/*"
           element={
