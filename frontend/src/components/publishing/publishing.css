@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --label: #d6caf8;
+  --black: #000000;
+  --header: #0d1122;
+  --fondo-container: #1e1e1eb5;
+  --letter: #cbf4f7;
+  --white: #ffff;
+  --button: #524388;
+  --hover: #00eeff80;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+}
+
+.container-main__publishing {
+  display: flex;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../../assets/img/imagen-fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* max-width: 100vh; */
+  flex-direction: column;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+}
+/* main {
+  display: flex;
+  height: 110vh;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+} */
+
+.publishing-user {
+  width: 50%;
+  height: 100vh;
+  background-color: #fdffff69;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+}
+
+.publishing-user h2 {
+  /* margin: 40px 0px; */
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.publishing-user .cards-ads {
+  height: 150px;
+  width: auto;
+  margin-top: 30px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.cards-ads .card {
+  background-color: var(--white);
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.card h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.card table {
+  margin: 0;
+  width: 100%;
+}
+.card table td {
+  font-size: 14px;
+  color: #000000;
+}
+.card input {
+  background-color: var(--button);
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 80px;
+  color: var(--white);
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-left: 0;
+  height: 20px;
+}
+.card input:hover {
+  background-color: var(--label);
+  color: #000000;
+}
+.card input[value="Eliminar"] {
+  font-size: 12px;
+  padding-top: 2px;
+}
+.edit {
+  background-color: var(--button);
+  border-radius: 8px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  /* padding: 2px; */
+  margin: 15px 0px;
+  cursor: pointer;
+  border: none;
+  width: 25%;
+  margin-top: 50px;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--letter);
+}
+
+button:hover,
+.edit a:hover {
+  background-color: var(--label);
+  animation: 0.1s ease-in;
+  color: #000000;
+}
+
+.swal2-styled {
+  width: 60px;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    margin: 0px;
+  }
+  .nav .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    margin-right: 20px;
+  }
+
+  .profile-image {
+    display: none;
+  }
+
+  .container-account ul {
+    display: block;
+    place-content: space-between;
+    margin: 0px;
+    border-radius: 5px;
+    width: 210px;
+    padding: 5px;
+  }
+  .container-account ul li {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /* .container-account ul li a:hover {
+    color: #CBF4F7;
+  } */
+  #menu-check:not(:checked) ~ .container-account .profile-list {
+    display: none;
+  }
+
+  #menu-check:checked ~ .container-account {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    /* border: 3px solid var(--label); */
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    z-index: 9999;
+    color: var(--label);
+  }
+
+  #menu:hover {
+    color: var(--letter);
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  header .container-account {
+    position: absolute;
+  }
+  .publishing-user {
+    width: 600px;
+  }
+  .publishing-user h2 {
+    font-size: 25px;
+  }
+  button {
+    width: 130px;
+  }
+  .cards-ads {
+    width: 545px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-list ul {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .container-list ul li {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .container-list ul li a {
+    font-size: 20px;
+  }
+  .container-account ul {
+    width: 210px;
+    padding: 5px;
+  }
+  .container-account ul li {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  #menu {
+    font-size: 30px;
+    top: 40px;
+  }
+
+  .publishing-user {
+    width: 440px;
+  }
+  .cards-ads {
+    width: 390px;
+  }
+  .publishing-user h2 {
+    font-size: 22px;
+  }
+}
