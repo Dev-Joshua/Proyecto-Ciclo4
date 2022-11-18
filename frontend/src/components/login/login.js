@@ -29,7 +29,7 @@ export default class login extends React.Component {
       <>
         <Navbar />
         <main style={{ backgroundImage: `url(${Background})` }}>
-          <section className="container-main">
+          <section className="container-main__login">
             <section className="texto-login">
               <h1 className="texto-login-ani">Bienvenidos</h1>
               <p>WEB dedicada a encontrar su mascota perdida.</p>

@@ -52,7 +52,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.container-main {
+.container-main__login {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -188,7 +188,7 @@ input::placeholder {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  top: -40px;
+  top: -45px;
   right: -90%;
   width: 30px;
 }

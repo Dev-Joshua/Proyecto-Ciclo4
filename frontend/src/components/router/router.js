@@ -8,6 +8,7 @@ import Navbar from "../navbar/navbar";
 import Home from "../beginning/home";
 import Add from "../add-ad/add_ad";
 import Info from "../info/info";
+import Profile from "../profile/profile";
 
 export default function AppRouter() {
   return (
@@ -19,6 +20,7 @@ export default function AppRouter() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/add_ad" element={<Add />} />
         <Route exact path="/info" element={<Info />} />
+        <Route exact path="/profile" element={<Profile />} />
         <Route
           path="/*"
           element={

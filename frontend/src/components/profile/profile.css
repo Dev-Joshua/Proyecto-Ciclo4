@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --label: #d6caf8;
+  --black: #000000;
+  --header: #0d1122;
+  --fondo-container: #1e1e1eb5;
+  --letter: #cbf4f7;
+  --white: #ffff;
+  --button: #524388;
+  --hover: #00eeff80;
+  /* --sm: 14px;
+  --md: 16px;
+  --lg: 20px; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+}
+
+.container-main__profile {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../../assets/img/foto_fondo3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-user {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--letter);
+  font-size: 20px;
+  gap: 10px;
+  flex-direction: column-reverse;
+}
+
+.icon-user img {
+  height: 70px;
+  width: 70px;
+}
+
+.icon-user h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.icon-closed {
+  margin-right: -550px;
+  margin-top: 5px;
+}
+
+.card-info {
+  background: linear-gradient(0deg, rgb(0 0 0 / 74%), rgb(98 97 103 / 85%));
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  margin: 60px 0;
+}
+
+.contact-details {
+  width: auto;
+  display: grid;
+  grid-template-columns: 100px 350px;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-details button {
+  width: 100%;
+}
+
+.data-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10px; */
+  margin-bottom: 15px;
+}
+
+label .labelPf {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--label);
+  font-size: 18px;
+  /* text-align: center; */
+  text-transform: uppercase;
+}
+
+.contact-details input {
+  border-radius: 8px;
+  height: 35px;
+  font-size: 16px;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  color: var(--button);
+}
+
+input::placeholder {
+  color: var(--label);
+}
+
+button {
+  background-color: var(--button);
+  border-radius: 8px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  /* padding: 8px; */
+  /* margin: 10px; */
+  cursor: pointer;
+  border: none;
+  width: 50%;
+  /* margin-top: -30px;*/
+}
+
+button a {
+  text-decoration: none;
+  color: var(--letter);
+}
+button a:hover {
+  color: #000000;
+}
+/* button:hover,
+.edit:hover {
+  background-color: var(--label);
+  animation: .1s ease-in;
+  color: #000000;
+} */
+
+@media (max-width: 1100px) {
+  .nav {
+    margin: 0px;
+  }
+  .nav .logo {
+    width: 200px;
+  }
+  .card-info {
+    width: 530px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav .logo {
+    width: 180px;
+  }
+  .container-list ul {
+    justify-content: flex-end;
+  }
+  .container-list ul li {
+    margin-left: 20px;
+  }
+  .container-list ul li a {
+    font-size: 20px;
+  }
+  .card-info {
+    width: 600px;
+  }
+  .icon-closed {
+    margin-top: 10px;
+    margin-right: -520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav .logo {
+    width: 150px;
+  }
+  .card-info {
+    width: 450px;
+  }
+  .contact-details {
+    grid-template-columns: 100px 300px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .icon-user h2 {
+    font-size: 25px;
+  }
+  .icon-closed {
+    margin-right: -380px;
+  }
+  .icon-closed img {
+    width: 30px;
+    height: 30px;
+  }
+  .container-list {
+    margin: 0;
+  }
+  .container-list ul {
+    margin-right: 20px;
+  }
+}
