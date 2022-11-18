@@ -228,7 +228,7 @@ input #src-file::content {
   top: 15px;
 }
 
-button {
+.formulario button {
   background-color: var(--button);
   border-color: var(--letter);
   border-radius: 8px;
@@ -244,7 +244,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+.formulario button:hover {
   background-color: var(--label);
   animation: 0.1s ease-in;
   color: #000000;
