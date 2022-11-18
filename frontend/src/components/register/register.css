@@ -58,17 +58,17 @@ main {
   align-items: center;
 }
 
-.container-main {
+.container-main__register {
   margin: 60px 0px;
   height: auto;
 }
 
-.icon-closed {
+.icon-closed__register {
   position: relative;
-  margin-top: 20px;
-  left: 250px;
+  top: 20px;
+  left: 230px;
 }
-.icon-closed a {
+.icon-closed__register a {
   font-size: 30px;
   color: var(--label);
 }

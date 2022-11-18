@@ -15,9 +15,9 @@ export default class register extends React.Component {
       <>
         <Navbar />
         <main style={{ backgroundImage: `url(${Background})` }}>
-          <section className="container-main">
+          <section className="container-main__register">
             <section className="register">
-              <div className="icon-closed">
+              <div className="icon-closed__register">
                 <a href="../login">
                   <FontAwesomeIcon icon={faCircleXmark} />
                 </a>

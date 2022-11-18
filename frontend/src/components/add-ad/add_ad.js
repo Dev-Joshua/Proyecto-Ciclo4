@@ -16,7 +16,7 @@ export default class register extends React.Component {
         <main className="container-main__add">
           <section className="section-container">
             <section className="container-form">
-              <div className="icon-closed">
+              <div className="icon-closed__add">
                 <a href="../login">
                   <FontAwesomeIcon icon={faCircleXmark} />
                 </a>

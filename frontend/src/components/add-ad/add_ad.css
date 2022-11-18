@@ -70,17 +70,14 @@
   width: 500px;
 }
 
-.icon-closed {
-  display: flex;
-  flex-direction: column-reverse;
-  align-content: stretch;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: nowrap;
+.icon-closed__add {
   position: relative;
-  top: 5px;
-  left: 240px;
-  margin: 0;
+  top: 20px;
+  left: 230px;
+}
+.icon-closed__add a {
+  font-size: 30px;
+  color: var(--label);
 }
 
 .title h2 {

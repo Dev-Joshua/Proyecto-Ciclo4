@@ -7,6 +7,7 @@ import Image from "../../assets/img/404.jpg";
 import Navbar from "../navbar/navbar";
 import Home from "../beginning/home";
 import Add from "../add-ad/add_ad";
+import Info from "../info/info";
 
 export default function AppRouter() {
   return (
@@ -17,6 +18,7 @@ export default function AppRouter() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/add_ad" element={<Add />} />
+        <Route exact path="/info" element={<Info />} />
         <Route
           path="/*"
           element={
