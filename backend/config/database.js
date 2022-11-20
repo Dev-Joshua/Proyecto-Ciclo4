@@ -14,3 +14,6 @@ exports.mongoConnect = () => {
     console.error.bind(console, "Mongodb connection error")
   );
 };
+
+//Me conecto con la base de datos(Todo el proceso para conectar con la BD)
+//En pocas palabras se levanta el servicio.(Trabajamos con un servidor a nivel local)

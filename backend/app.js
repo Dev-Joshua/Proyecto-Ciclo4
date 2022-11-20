@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-//Mongo connect
+//Mongo connection
 database.mongoConnect();
 app.use("/usuarios", usuariosRouter);
 app.use(auth);

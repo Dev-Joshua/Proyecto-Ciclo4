@@ -1,4 +1,4 @@
-//Importo el modelo y lo guardo en Empleado
+//Importo el modelo y lo guardo en Persona
 const Persona = require("../models/personas.model");
 //Si no hay conexion envia un falso(no pudo traerme el dato de personas.model)
 let response = {
@@ -6,7 +6,7 @@ let response = {
   exito: false,
 };
 
-//Funcion que me permite crear un nuevo empleado(captuira datos nombre, apellido, telefono etc)
+//Funcion que me permite crear una nueva persona(captuira datos nombre, apellido, telefono etc)
 exports.create = function (req, res) {
   let persona = new Persona({
     nombres: req.body.nombres,
@@ -46,7 +46,7 @@ exports.findOne = function (req, res) {
 
 //Creo la funcion(request and response) para el metodo actualizar
 exports.update = function (req, res) {
-  let empleado = {
+  let persona = {
     nombre: req.body.nombre,
     apellido_p: req.body.apellido_p,
     apellido_m: req.body.apellido_m,
@@ -55,34 +55,34 @@ exports.update = function (req, res) {
     direccion: req.body.direccion,
   };
   //Filtro x el id, dado el caso que encuentre el id va a poner el dato en el id
-  Empleado.findByIdAndUpdate(req.params.id, { $set: empleado }, function (err) {
+  Persona.findByIdAndUpdate(req.params.id, { $set: persona }, function (err) {
     //Si hay un error poniendo el dato muestra este codigo
     if (err) {
       console.error(err);
       response.exito = false;
-      response.msg = "Error al modificar el empleado";
+      response.msg = "Error al modificar el usuario";
       res.json(response);
       return;
     }
     //Si pone el nuevo dato en el id mostrara correctamente modificado
     response.exito = true;
-    response.msg = "El empleado se modifico correctamente";
+    response.msg = "El usuario se modifico correctamente";
     res.json(response);
   });
 };
 
-//Funcion para eliminar un empleado
+//Funcion para eliminar un usuario(Persona)
 exports.remove = function (req, res) {
-  Empleado.findByIdAndRemove({ _id: req.params.id }, function (err) {
+  Persona.findByIdAndRemove({ _id: req.params.id }, function (err) {
     if (err) {
       console.error(err);
       response.exito = false;
-      response.msg = "Error al eliminar el empleado";
+      response.msg = "Error al eliminar el usuario";
       res.json(response);
       return;
     }
     response.exito = true;
-    response.msg = "El empleado se elimino correctamente";
+    response.msg = "El usuario se elimino correctamente";
     res.json(response);
   });
 };

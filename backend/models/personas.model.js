@@ -1,3 +1,4 @@
+//Declaro el uso de mongoose como dependencia para la conexion a la BD
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -12,3 +13,6 @@ const PersonasSchema = new Schema({
 });
 
 module.exports = mongoose.model("personas", PersonasSchema);
+
+//Trabajo mongoose como un esquema(Schema). Dentro de este esqema creo una nueva tabla llamada PersonasSchema.
+//Declaro los atrbituos para Personas
