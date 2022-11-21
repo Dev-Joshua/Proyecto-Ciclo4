@@ -4,6 +4,7 @@ import "./home.css";
 import AddIcon from "../../assets/icon/add-anuncio - color.png";
 import CardImg from "../../assets/img/4.jpg";
 import Background from "../../assets/img/home.jpg";
+import { request } from "../helper/helper";
 
 export default class home extends React.Component {
   constructor(props) {
@@ -78,7 +79,7 @@ export default class home extends React.Component {
                               alt="cerrar"
                             />
                           </div>
-                          <ul>
+                          {/* <ul>
                             <li>
                               <a href="#" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -94,7 +95,7 @@ export default class home extends React.Component {
                                 <i className="fab fa-whatsapp"></i>
                               </a>
                             </li>
-                          </ul>
+                          </ul> */}
                         </div>
                       </div>
                     </div>
@@ -142,7 +143,7 @@ export default class home extends React.Component {
                               alt="cerrar"
                             />
                           </div>
-                          <ul>
+                          {/* <ul>
                             <li>
                               <a href="#" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -158,7 +159,7 @@ export default class home extends React.Component {
                                 <i className="fab fa-whatsapp"></i>
                               </a>
                             </li>
-                          </ul>
+                          </ul> */}
                         </div>
                       </div>
                     </div>
@@ -206,7 +207,7 @@ export default class home extends React.Component {
                               alt="cerrar"
                             />
                           </div>
-                          <ul>
+                          {/* <ul>
                             <li>
                               <a href="#" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -222,7 +223,7 @@ export default class home extends React.Component {
                                 <i className="fab fa-whatsapp"></i>
                               </a>
                             </li>
-                          </ul>
+                          </ul> */}
                         </div>
                       </div>
                     </div>

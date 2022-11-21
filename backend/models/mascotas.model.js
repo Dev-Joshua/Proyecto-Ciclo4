@@ -12,3 +12,5 @@ const MascotasSchema = new Schema({
 });
 
 module.exports = mongoose.model("mascotas", MascotasSchema);
+
+//Creo un nuevo esquema(Nueva tabla)

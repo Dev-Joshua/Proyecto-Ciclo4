@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 //Hago un proceso de autenticacion
 exports.login = function (req, res, next) {
-  //El encriptamiento que le voy a entregar a traves del body(que estara en el password(pass)) va a ser un encriptamiento a traves del "sha512"
+  //El encriptamiento que le voy a entregar a traves del body(que estara en el password(pass)) va a ser encriptado a traves de "sha512"
   let hashedpass = crypto
     .createHash("sha512")
     .update(req.body.pass)
@@ -35,3 +35,5 @@ exports.login = function (req, res, next) {
     }
   );
 };
+
+//Mediante usuarios.controller hago un proceso de autenticacion

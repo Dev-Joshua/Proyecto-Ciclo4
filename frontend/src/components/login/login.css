@@ -206,25 +206,19 @@ input::placeholder {
   border-color: var(--letter);
   border-radius: 8px;
   height: 60px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   padding: 8px;
   cursor: pointer;
   border: none;
   margin-top: 10px;
   width: 100%;
+  color: var(--letter);
 }
-.button:hover,
-.button a:hover {
+.button:hover {
   background-color: var(--label);
   animation: 0.1s ease-in;
   color: #000000;
-}
-
-.button a {
-  text-decoration: none;
-  color: var(--letter);
-  font-size: 18px;
 }
 
 .footer {

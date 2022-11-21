@@ -5,8 +5,11 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 //Declaro una variable con mi base de datos
 var database = require("./config/database");
-var auth = require("./auth/main_auth");
+//Trabajo con estas dependencias
+var auth = require("./auth/main_auth"); //Con auth valido el token del usuario al iniciar sesion
+var cors = require("cors"); //Con cors me va a reconocer las peticiones que vienen desde el frontend
 
+//En app llamo a router
 var personasRouter = require("./routes/personas.router");
 var mascotasRouter = require("./routes/mascotas.router");
 var usuariosRouter = require("./routes/usuarios.router");
@@ -18,9 +21,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cors());
+
 //Mongo connection
 database.mongoConnect();
+//Verificar usuario/contraseñá
 app.use("/usuarios", usuariosRouter);
+//Luego hace la autenticacion.(Si es correcta me deja usar las otras paginas)
 app.use(auth);
 
 //Routers

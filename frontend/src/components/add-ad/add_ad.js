@@ -56,7 +56,7 @@ export default class register extends React.Component {
                   placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"
                 ></textarea>
                 <div class="input-file" id="src-file">
-                  <label htmlFor="pics">Fotos de tu mascota:</label>
+                  <label htmlFor="pics">Foto de tu mascota:</label>
                   <div></div>
                   <input
                     name="photo"

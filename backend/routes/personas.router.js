@@ -1,4 +1,4 @@
-//Creo el router. Sirve para decirle que trabajaremos con express
+//Creo el router. Le digo que trabajaremos con express
 const express = require("express");
 const router = express.Router();
 const personasController = require("../controllers/personas.controller");
@@ -11,3 +11,5 @@ router.put("/:id", personasController.update); //ACTUALIZAR
 router.delete("/:id", personasController.remove); //ELIMINAR
 
 module.exports = router;
+
+//El Router llama a personasController(Es quien me hace el proceso de guardar los datos en el modelo->Persona.model)

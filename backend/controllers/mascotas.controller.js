@@ -5,7 +5,7 @@ let response = {
   exito: false,
 };
 
-//Funcion que me permite crear un nuevo empleado(captuira datos nombre, apellido, telefono etc)
+//Crear una Mascota
 exports.create = function (req, res) {
   let mascota = new Mascota({
     mascota_id: req.body.mascota_id,

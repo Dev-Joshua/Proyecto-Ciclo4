@@ -6,10 +6,10 @@ let response = {
   exito: false,
 };
 
-//Funcion que me permite crear una nueva persona(captuira datos nombre, apellido, telefono etc)
+//Funcion que me permite crear una nueva persona(captura datos nombre, apellido, telefono etc)
 exports.create = function (req, res) {
   let persona = new Persona({
-    nombres: req.body.nombres,
+    nombres: req.body.nombres, //Como requerimiento lo debo hacer a traves de un body(en postman)
     apellidos: req.body.apellidos,
     direccion: req.body.direccion,
     celular: req.body.celular,
@@ -32,6 +32,7 @@ exports.create = function (req, res) {
   });
 };
 
+//Encontrar(Es como un SELECT que me trae todos los datos )
 exports.find = function (req, res) {
   Persona.find(function (err, personas) {
     res.json(personas);
@@ -47,12 +48,11 @@ exports.findOne = function (req, res) {
 //Creo la funcion(request and response) para el metodo actualizar
 exports.update = function (req, res) {
   let persona = {
-    nombre: req.body.nombre,
-    apellido_p: req.body.apellido_p,
-    apellido_m: req.body.apellido_m,
-    telefono: req.body.telefono,
-    mail: req.body.mail,
+    nombres: req.body.nombres,
+    apellidos: req.body.apellidos,
     direccion: req.body.direccion,
+    celular: req.body.celular,
+    ciudad: req.body.ciudad,
   };
   //Filtro x el id, dado el caso que encuentre el id va a poner el dato en el id
   Persona.findByIdAndUpdate(req.params.id, { $set: persona }, function (err) {
