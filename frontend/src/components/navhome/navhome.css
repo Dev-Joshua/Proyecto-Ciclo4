@@ -37,7 +37,6 @@ html {
 
 nav img {
   width: 150px;
-  margin-left: 20px;
   margin-top: 10px;
   display: flex;
 }
@@ -83,7 +82,7 @@ nav img {
 /*---------------------------- Profile ------------------------*/
 .profile-image {
   margin-top: 8px;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .profile-image img {
@@ -108,7 +107,7 @@ nav img {
   margin: 25px 0px -192px 60px;
   background-color: var(--button);
   color: var(--letter);
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 20px;
 }
 

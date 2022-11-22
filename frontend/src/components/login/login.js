@@ -29,8 +29,8 @@ export default class login extends React.Component {
   }
 
   iniciarSesion() {
-    //El loading se va a activar cuando se ejeecute esta funcion(inicie sesion)
     this.setState({ loading: true });
+    //
     axios
       .post(`${APIHOST}/usuarios/login`, {
         usuario: this.state.usuario,
@@ -50,6 +50,7 @@ export default class login extends React.Component {
         this.setState({ loading: false });
       })
       .catch((err) => {
+        console.log(err);
         this.setState({ loading: false });
       });
   }
@@ -83,6 +84,7 @@ export default class login extends React.Component {
                 <input
                   id="email"
                   name="email"
+                  type="email"
                   placeholder="yourUser@example.com"
                   onChange={(e) => this.setState({ usuario: e.target.value })}
                 />
@@ -90,7 +92,7 @@ export default class login extends React.Component {
                 <input
                   name="password"
                   type="password"
-                  placeholder="*************"
+                  placeholder="**********"
                   id="password"
                   onChange={(e) => this.setState({ pass: e.target.value })}
                 />
