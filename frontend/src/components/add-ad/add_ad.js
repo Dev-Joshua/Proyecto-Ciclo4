@@ -1,14 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navhome from "../navhome/navhome";
 import "./add_ad.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-export default class register extends React.Component {
+
+export default class Add extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    //
+    this.state = {
+      mascota: {
+        nombre: "",
+        fechaPerdida: "",
+        lugarPerdiad: "",
+        descripcion: "",
+        photo: "",
+      },
+    };
   }
+
+  setValue(home, value) {
+    this.setState({
+      mascota: {
+        ...this.state.mascota,
+        [home]: value,
+      },
+    });
+  }
+  // crearMascota() {
+  //   this.setState({ loading: true });
+  //   //
+  //   axios
+  //     .post(`${APIHOST}/mascotas`, {
+  //       nombre: this.state.nombre,
+  //       fechaPerdida: this.state.fechaPerdida,
+  //       lugarPerdida: this.state.lugarPerdida,
+  //       descripcion: this.state.descripcion,
+  //       photo: this.state.photo,
+  //     })
+  //     .then((response) => {
+
+  //       this.setState({ loading: false });
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       this.setState({ loading: false });
+  //     });
+  // }
+
   render() {
     return (
       <>
@@ -24,14 +64,30 @@ export default class register extends React.Component {
               <div className="title">
                 <h2>Nuevo anuncio</h2>
               </div>
-              <form className="formulario" onsubmit="createPet(event)">
+              <form className="formulario">
                 <label htmlFor="name">Nombre mascota:</label>
-                <input type="varchar" name="name" />
+                <input
+                  type="text"
+                  name="nombre"
+                  onChange={(e) => this.setState({ nombre: e.target.value })}
+                />
                 <label htmlFor="location">Fecha de perdida:</label>
-                <input type="date" name="dateLost" />
+                <input
+                  type="date"
+                  name="fechaPerdida"
+                  onChange={(e) =>
+                    this.setState({ fechaPerdida: e.target.value })
+                  }
+                />
                 <label htmlFor="location">Lugar de perdida:</label>
-                <input type="varchar" name="placeLost" />
-                <div className="form-select">
+                <input
+                  type="text"
+                  name="lugarPerdida"
+                  onChange={(e) =>
+                    this.setState({ lugarPerdida: e.target.value })
+                  }
+                />
+                {/* <div className="form-select">
                   <input type="radio" id="cat" name="pets" value="cat" />
                   <label htmlFor="cat">Gato</label>
                   <br />
@@ -43,17 +99,19 @@ export default class register extends React.Component {
                     checked
                   />
                   <label htmlFor="dog">Perro</label>
-                </div>
+                </div> */}
 
                 <label htmlFor="descripcion">Descripción del anuncio:</label>
-
                 <textarea
                   type="text"
-                  name="text"
+                  name="descripcion"
                   id="details"
                   rows="4"
                   cols="50"
                   placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"
+                  onChange={(e) =>
+                    this.setState({ descripcion: e.target.value })
+                  }
                 ></textarea>
                 <div class="input-file" id="src-file">
                   <label htmlFor="pics">Foto de tu mascota:</label>
@@ -61,11 +119,14 @@ export default class register extends React.Component {
                   <input
                     name="photo"
                     accept="image/*"
-                    type="file"
+                    type="text"
                     id="input_image"
+                    onChange={(e) => this.setState({ photo: e.target.value })}
                   />
                 </div>
-                <button type="submit">Crear Anuncio</button>
+                <button type="submit" onClick={() => console.log(this.state)}>
+                  Crear Anuncio
+                </button>
               </form>
             </section>
           </section>
