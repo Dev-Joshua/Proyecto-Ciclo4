@@ -100,7 +100,7 @@ label {
   margin: 0;
 }
 
-input {
+.formulario input {
   border-radius: 8px;
   height: 35px;
   font-size: 14px;
@@ -111,6 +111,7 @@ input {
   border: none;
   margin-top: 5px;
   outline: none;
+  margin-left: 0;
 }
 
 input::placeholder {
@@ -118,7 +119,6 @@ input::placeholder {
 }
 
 .formulario input[type="text"] {
-  height: 120px;
   font-size: 14px;
 }
 

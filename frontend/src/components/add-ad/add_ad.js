@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navhome from "../navhome/navhome";
 import "./add_ad.css";
 
@@ -119,7 +119,7 @@ export default class Add extends React.Component {
                   <input
                     name="photo"
                     accept="image/*"
-                    type="text"
+                    type="file"
                     id="input_image"
                     onChange={(e) => this.setState({ photo: e.target.value })}
                   />
