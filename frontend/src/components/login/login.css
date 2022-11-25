@@ -188,7 +188,7 @@ input::placeholder {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  top: -45px;
+  top: -40px;
   right: -90%;
   width: 30px;
 }

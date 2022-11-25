@@ -114,7 +114,7 @@ export default class login extends React.Component {
                 </button>
                 <h3>¿Aún no tienes cuenta?</h3>
                 <button className="button">
-                  <a href="../register">Regístrate</a>
+                  <a href="../register/register.js">Regístrate</a>
                 </button>
               </form>
             </section>

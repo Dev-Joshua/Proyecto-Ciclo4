@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Kira",
+    "fechaPerdida": "22/02/2021",
+    "lugarPerdida": "Parque campestre",
+    "descripcion": "Perrita puddle de color negro",
+    "foto": "./multimedia/1.jpg"
+  },
+  {
+    "nombre": "Kira",
+    "fechaPerdida": "22/02/2021",
+    "lugarPerdida": "Parque campestre",
+    "descripcion": "Perrita puddle de color negro",
+    "foto": "./multimedia/2.jpg"
+  },
+  {
+    "nombre": "Kira",
+    "fechaPerdida": "22/02/2021",
+    "lugarPerdida": "Parque campestre",
+    "descripcion": "Perrita puddle de color negro",
+    "foto": "./multimedia/4.jpg"
+  }
+]

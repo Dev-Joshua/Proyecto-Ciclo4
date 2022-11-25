@@ -95,7 +95,7 @@ export default class register extends React.Component {
                     style={{ marginTop: 30 }}
                     type="submit"
                   >
-                    <a href="../register/register.js">Registrarse</a>
+                    <a href="../beginning/home.js">Registrarse</a>
                   </button>
                 </form>
               </div>

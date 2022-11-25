@@ -1,21 +1,24 @@
 import React from "react";
 import Navhome from "../navhome/navhome";
+import Loading from "../loading/loading";
 import "./add_ad.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
+import { request } from "../helper/helper";
 
 export default class Add extends React.Component {
   constructor(props) {
     super(props);
     //
     this.state = {
+      loading: false,
       mascota: {
         nombre: "",
         fechaPerdida: "",
         lugarPerdiad: "",
         descripcion: "",
-        photo: "",
+        foto: "",
       },
     };
   }
@@ -28,32 +31,26 @@ export default class Add extends React.Component {
       },
     });
   }
-  // crearMascota() {
-  //   this.setState({ loading: true });
-  //   //
-  //   axios
-  //     .post(`${APIHOST}/mascotas`, {
-  //       nombre: this.state.nombre,
-  //       fechaPerdida: this.state.fechaPerdida,
-  //       lugarPerdida: this.state.lugarPerdida,
-  //       descripcion: this.state.descripcion,
-  //       photo: this.state.photo,
-  //     })
-  //     .then((response) => {
-
-  //       this.setState({ loading: false });
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       this.setState({ loading: false });
-  //     });
-  // }
+  crearMascota() {
+    this.setState({ loading: true });
+    request
+      .post("/mascotas", this.state.mascota)
+      .then((response) => {
+        this.setState({ loading: false });
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ loading: false });
+      });
+  }
 
   render() {
     return (
       <>
         <Navhome />
         <main className="container-main__add">
+          <Loading show={this.state.loading} />
           <section className="section-container">
             <section className="container-form">
               <div className="icon-closed__add">
@@ -113,15 +110,15 @@ export default class Add extends React.Component {
                     this.setState({ descripcion: e.target.value })
                   }
                 ></textarea>
-                <div class="input-file" id="src-file">
+                <div className="input-file" id="src-file">
                   <label htmlFor="pics">Foto de tu mascota:</label>
                   <div></div>
                   <input
-                    name="photo"
+                    name="foto"
                     accept="image/*"
                     type="file"
                     id="input_image"
-                    onChange={(e) => this.setState({ photo: e.target.value })}
+                    onChange={(e) => this.setState({ foto: e.target.value })}
                   />
                 </div>
                 <button type="submit" onClick={() => console.log(this.state)}>

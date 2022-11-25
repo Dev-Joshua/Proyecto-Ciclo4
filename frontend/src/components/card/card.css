@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --label: #d6caf8;
+  --black: #000000;
+  --header: #0d1122;
+  --fondo-container: #1e1e1eb5;
+  --letter: #cbf4f7;
+  --white: #ffff;
+  --button: #524388;
+  --hover: #00eeff80;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+}
+
+.cards-ads {
+  /* width: 80%; */
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 75px 30px 0px 30px;
+}
+
+.cards-ads .card-pet {
+  width: 260px;
+  height: 320px;
+  position: relative;
+  border: none;
+  border-radius: 30px 10px 30px 10px;
+  box-shadow: 5px 10px 10px #111111;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+.cards-ads .card-pet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-ads .card-pet .card-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  grid-auto-columns: 80%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 25, 2.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* transition: all 0.5s linear; */
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 450ms opacity;
+  align-content: space-evenly;
+}
+
+.cards-ads .card-pet .card-body:hover {
+  opacity: 1;
+}
+
+.cards-ads .card-pet .card-body h3 {
+  font-size: 25px;
+  color: var(--button);
+  font-weight: bold;
+  /*backdrop-filter: blur(10px);
+  */
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--letter);
+  border-radius: 20px 10px 20px 10px;
+}
+.cards-ads .card-pet .card-body td {
+  font-size: 15px;
+}
+.cards-ads .card-pet .card-body hr {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.cards-ads .card-pet .card-body ul {
+  display: block;
+}
+
+.cards-ads .card-pet .card-body ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.cards-ads .card-pet .card-body ul li a {
+  display: block;
+  color: var(--button);
+  font-size: 20px;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+
+.cards-ads .card-pet .card-body ul li:hover a {
+  transform: translateY(-10px);
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+tbody {
+  color: var(--letter);
+}
+.contactar {
+  background-color: #d6caf8;
+  border-radius: 30px;
+  font-size: 14px;
+  height: 40px;
+}
+.modal ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.modal ul li a {
+  color: var(--button);
+  font-size: 20px;
+  transition: all 0.5s linear;
+}
+
+.modal ul li:hover a {
+  color: var(--label);
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 135px;
+  left: 50px;
+  opacity: 0;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background: var(--letter);
+  width: 250px;
+  max-width: 100%;
+  height: 110px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* margin-top: 20px; */
+}
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--label);
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  background-color: var(--letter);
+  border-radius: 20px 10px 20px 10px;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  width: 50%;
+  color: var(--button);
+  font-weight: bold;
+}
+
+/* Animacion Boton contactar */
+button.contactar {
+  animation: contactar 2s ease-in-out infinite both;
+  -webkit-animation: contactar 2s ease-in-out infinite both;
+}
+
+@-webkit-keyframes contactar {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes contactar {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* Fin Animacion Boton contactar */
+
+button a {
+  text-decoration: none;
+  color: var(--button);
+}
+
+button:hover {
+  background-color: var(--button);
+  color: var(--letter);
+}

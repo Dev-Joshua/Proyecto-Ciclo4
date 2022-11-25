@@ -19,7 +19,7 @@ export default class profile extends React.Component {
           <section className="card-info">
             <div className="data-user">
               <div className="icon-closed__add">
-                <a href="../login">
+                <a href="../beginning/home.js">
                   <FontAwesomeIcon icon={faCircleXmark} />
                 </a>
               </div>

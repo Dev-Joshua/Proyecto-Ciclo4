@@ -2,14 +2,60 @@ import React from "react";
 import Navhome from "../navhome/navhome";
 import "./home.css";
 import AddIcon from "../../assets/icon/add-anuncio - color.png";
-import CardImg from "../../assets/img/4.jpg";
+// import CardImg from "../../assets/img/4.jpg";
 import Background from "../../assets/img/home.jpg";
 import { request } from "../helper/helper";
+import Load from "../load/Load";
 
+// const products = [
+//   {
+//     id: 1,
+//     nombre: "Killer",
+//     fechaPerdida: "23/02/2022",
+//     lugarPerdiad: "parque",
+//     descripcion: "perro labrador",
+//     photo: "foto.jpg",
+//   },
+// ];
+// const columns = [
+//   {
+//     dataField: "_id",
+//   },
+//   {
+//     dataField: "nombre",
+//   },
+//   {
+//     dataField: "fechaPerdida",
+//   },
+//   {
+//     dataField: "lugarPerdida",
+//   },
+//   {
+//     dataField: "descripcion",
+//   },
+//   {
+//     dataField: "photo",
+//   },
+// ];
 export default class home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      rows: [],
+    };
+  }
+  componentDidMount() {
+    this.getData();
+  }
+  getData() {
+    request
+      .get(this.props.url)
+      .then((response) => {
+        this.setState({ rows: response.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
   render() {
     return (
@@ -38,71 +84,9 @@ export default class home extends React.Component {
             </section>
             {/* Cards */}
             <section className="cards-ads" id="cards-ads">
-              <article className="card-pet">
-                <img src={CardImg} alt="img" />
-                <div className="card-body">
-                  <h3>Brandom Tercero</h3>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>Perdido en el CC Cable Plaza</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Fecha de perdida:12/24/36
-                          <br />
-                          Ultima vez visto: Por fundadores
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Descripción:Tiene collar con el nombre, Lleva ropa de
-                          superman, Es muy tranquilo.
-                        </td>
-                      </tr>
-                      <hr />
-                    </tbody>
-                  </table>
-                  <hr />
-                  <div className="container-ul">
-                    <div className="button-container">
-                      <button className="contactar" id="contactar">
-                        Contactar
-                      </button>
-                      <div id="modal-container" className="modal-container">
-                        <div className="modal">
-                          <div id="close" className="icon-closed">
-                            <img
-                              src="../../assets/icon/closed - color.png"
-                              width="20px"
-                              height="20px"
-                              alt="cerrar"
-                            />
-                          </div>
-                          {/* <ul>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-facebook-f"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-instagram"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-whatsapp"></i>
-                              </a>
-                            </li>
-                          </ul> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className="card-pet">
+              <Load />
+
+              {/* <article className="card-pet">
                 <img src={CardImg} alt="img"></img>
                 <div className="card-body">
                   <h3>Brandom Tercero</h3>
@@ -143,7 +127,7 @@ export default class home extends React.Component {
                               alt="cerrar"
                             />
                           </div>
-                          {/* <ul>
+                          <ul>
                             <li>
                               <a href="#" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -159,77 +143,13 @@ export default class home extends React.Component {
                                 <i className="fab fa-whatsapp"></i>
                               </a>
                             </li>
-                          </ul> */}
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </article>
-              <article className="card-pet">
-                <img src={CardImg} alt="img"></img>
-                <div className="card-body">
-                  <h3>Brandom Tercero</h3>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>Perdido en el CC Cable Plaza</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Fecha de perdida:12/24/36
-                          <br />
-                          Ultima vez visto: Por fundadores
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Descripción:Tiene collar con el nombre, Lleva ropa de
-                          superman, Es muy tranquilo.
-                        </td>
-                      </tr>
-                      <hr />
-                    </tbody>
-                  </table>
-                  <hr />
-                  <div className="container-ul">
-                    <div className="button-container">
-                      <button className="contactar" id="contactar">
-                        Contactar
-                      </button>
-                      <div id="modal-container" className="modal-container">
-                        <div className="modal">
-                          <div id="close" className="icon-closed">
-                            <img
-                              src="../../assets/icon/closed - color.png"
-                              width="20px"
-                              height="20px"
-                              alt="cerrar"
-                            />
-                          </div>
-                          {/* <ul>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-facebook-f"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-instagram"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-whatsapp"></i>
-                              </a>
-                            </li>
-                          </ul> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              </article> */}
             </section>
           </section>
         </main>
