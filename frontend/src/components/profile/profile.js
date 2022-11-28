@@ -19,7 +19,7 @@ export default class profile extends React.Component {
           <section className="card-info">
             <div className="data-user">
               <div className="icon-closed__add">
-                <a href="../beginning/home.js">
+                <a href="../home">
                   <FontAwesomeIcon icon={faCircleXmark} />
                 </a>
               </div>
@@ -28,7 +28,7 @@ export default class profile extends React.Component {
                 <h2>Perfil</h2>
               </div>
               <div className="contact-details">
-                <label className="labelPf" for="nombre">
+                <label className="labelPf" htmlFor="nombre">
                   Nombre
                 </label>
                 <input
@@ -39,7 +39,7 @@ export default class profile extends React.Component {
                   id="name"
                 />
 
-                <label className="labelPf" for="apellido">
+                <label className="labelPf" htmlFor="apellido">
                   Apellido
                 </label>
                 <input
@@ -49,12 +49,12 @@ export default class profile extends React.Component {
                   id="lastname"
                 />
 
-                <label className="labelPf" for="ciudad">
+                <label className="labelPf" htmlFor="ciudad">
                   Ciudad
                 </label>
                 <input type="text" placeholder="Medellin" required id="city" />
 
-                <label className="labelPf" for="telefono">
+                <label className="labelPf" htmlFor="telefono">
                   Telefono
                 </label>
                 <input
@@ -64,7 +64,7 @@ export default class profile extends React.Component {
                   id="phone"
                 />
 
-                <label className="labelPf" for="dirección">
+                <label className="labelPf" htmlFor="dirección">
                   Direccion
                 </label>
                 <input
@@ -74,7 +74,7 @@ export default class profile extends React.Component {
                   id="address"
                 />
 
-                <label className="labelPf" for="email">
+                <label className="labelPf" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -84,7 +84,7 @@ export default class profile extends React.Component {
                   id="email"
                 />
 
-                <label className="labelPf" for="clave">
+                <label className="labelPf" htmlFor="clave">
                   Contraseña
                 </label>
                 <input
@@ -94,7 +94,7 @@ export default class profile extends React.Component {
                   id="password"
                 />
               </div>
-              <button onclick="updateInfo()">
+              <button>
                 <a className="edit" href="../profile">
                   Editar Cuenta
                 </a>

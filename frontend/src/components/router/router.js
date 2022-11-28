@@ -5,7 +5,7 @@ import Register from "../register/register";
 import Login from "../login/login";
 import Image from "../../assets/img/404.jpg";
 import Navbar from "../navbar/navbar";
-import Home from "../beginning/home";
+import Home from "../home/home";
 import Add from "../add-ad/add_ad";
 import Info from "../info/info";
 import Profile from "../profile/profile";

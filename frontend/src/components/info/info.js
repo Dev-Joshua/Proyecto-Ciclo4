@@ -17,7 +17,7 @@ export default class info extends React.Component {
             <div>
               <article class="text-info">
                 <div className="icon-closed__info">
-                  <a href="../login">
+                  <a href="../home">
                     <FontAwesomeIcon icon={faCircleXmark} />
                   </a>
                 </div>

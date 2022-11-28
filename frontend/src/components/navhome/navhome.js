@@ -22,10 +22,10 @@ export default class nav extends React.Component {
         <div className="container-list">
           <ul>
             <li>
-              <a href="../beginning/home.js">Inicio</a>
+              <a href="../home">Inicio</a>
             </li>
             <li>
-              <a href="../info/info.js">Informacion</a>
+              <a href="../info">Informacion</a>
             </li>
           </ul>
         </div>
@@ -38,13 +38,13 @@ export default class nav extends React.Component {
               Nombre
             </span>
             <li>
-              <a href="../profile/profile.js">Perfil</a>
+              <a href="../profile">Perfil</a>
             </li>
             <li>
-              <a href="../publishing/publishing.js">Anuncios</a>
+              <a href="../publishing">Anuncios</a>
             </li>
             <li>
-              <a href="../login/login.js">Cerrar sesión</a>
+              <a href="../login">Cerrar sesión</a>
             </li>
           </ul>
         </div>

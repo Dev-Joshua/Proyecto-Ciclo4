@@ -4,7 +4,7 @@ import "./home.css";
 import AddIcon from "../../assets/icon/add-anuncio - color.png";
 // import CardImg from "../../assets/img/4.jpg";
 import Background from "../../assets/img/home.jpg";
-import { request } from "../helper/helper";
+// import { request } from "../helper/helper";
 import Load from "../load/Load";
 
 // const products = [
@@ -41,22 +41,22 @@ export default class home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rows: [],
+      // rows: [],
     };
   }
-  componentDidMount() {
-    this.getData();
-  }
-  getData() {
-    request
-      .get(this.props.url)
-      .then((response) => {
-        this.setState({ rows: response.data });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+  // componentDidMount() {
+  //   this.getData();
+  // }
+  // getData() {
+  //   request
+  //     .get(this.props.url)
+  //     .then((response) => {
+  //       this.setState({ rows: response.data });
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
   render() {
     return (
       <>
