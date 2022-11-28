@@ -6,7 +6,7 @@ import Login from "../login/login";
 import Image from "../../assets/img/404.jpg";
 import Navbar from "../navbar/navbar";
 import Home from "../home/home";
-import Add from "../add-ad/add_ad";
+import Add from "../add_ad/add_ad";
 import Info from "../info/info";
 import Profile from "../profile/profile";
 import PublishingAd from "../publishing/publishing";

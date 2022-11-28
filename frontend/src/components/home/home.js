@@ -76,7 +76,7 @@ export default class home extends React.Component {
                 </select>
               </div>
               <div className="ad-container">
-                <a href="../html/add_ad.html">
+                <a href="../add_ad">
                   <label htmlFor="ad">Crear anuncio</label>
                   <img src={AddIcon} width="25px" height="25px" alt="add" />
                 </a>
