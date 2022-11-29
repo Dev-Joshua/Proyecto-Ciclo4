@@ -8,12 +8,12 @@ let response = {
 //Crear una Mascota
 exports.create = function (req, res) {
   let mascota = new Mascota({
-    mascota_id: req.body.mascota_id,
+    // mascota_id: req.body.mascota_id,
     nombre: req.body.nombre,
-    foto: req.body.foto,
     fecha_perdida: req.body.fecha_perdida,
     lugar_perdida: req.body.lugar_perdida,
     descripcion: req.body.descripcion,
+    foto: req.body.foto,
   });
 
   //Cuando capture los dato: SI! son capturados incorrectamente manda un error
@@ -47,12 +47,11 @@ exports.findOne = function (req, res) {
 //Creo la funcion(request and response) para el metodo actualizar
 exports.update = function (req, res) {
   let mascota = {
-    mascota_id: req.body.mascota_id,
     nombre: req.body.nombre,
-    edad: req.body.edad,
-    tipo_mascota: req.body.tipo_mascota,
+    fecha_perdida: req.body.fecha_perdida,
     lugar_perdida: req.body.lugar_perdida,
     descripcion: req.body.descripcion,
+    foto: req.body.foto,
   };
   //Filtro x el id, dado el caso que encuentre el id va a poner el dato en el id
   Mascota.findByIdAndUpdate(req.params.id, { $set: mascota }, function (err) {

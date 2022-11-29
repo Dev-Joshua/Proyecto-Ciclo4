@@ -53,6 +53,7 @@ exports.update = function (req, res) {
     direccion: req.body.direccion,
     celular: req.body.celular,
     ciudad: req.body.ciudad,
+    mascota_id: req.body.mascota_id,
   };
   //Filtro x el id, dado el caso que encuentre el id va a poner el dato en el id
   Persona.findByIdAndUpdate(req.params.id, { $set: persona }, function (err) {

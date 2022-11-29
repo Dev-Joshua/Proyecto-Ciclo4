@@ -8,6 +8,7 @@ const PersonasSchema = new Schema({
   direccion: { type: String, required: true, max: 60 },
   celular: { type: String, required: true, max: 20 },
   ciudad: { type: String, required: true, max: 70 },
+  mascota_id: { type: Number, max: 60 },
   // mail: { type: String, required: true, max: 70 },
   // direccion: { type: String, required: true, max: 60 },
 });
