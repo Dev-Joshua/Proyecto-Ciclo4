@@ -28,7 +28,7 @@ function renovarSesion() {
 }
 
 export const request = {
-  //Con get traigo la informacion(la busco)
+  //Con get traigo la informacion(la busco y leo)
   get: function (services) {
     let token = renovarSesion();
     return axios.get(`${APIHOST}${services}`, {

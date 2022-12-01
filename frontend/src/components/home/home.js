@@ -5,58 +5,26 @@ import AddIcon from "../../assets/icon/add-anuncio - color.png";
 // import CardImg from "../../assets/img/4.jpg";
 import Background from "../../assets/img/home.jpg";
 // import { request } from "../helper/helper";
-import Load from "../load/Load";
+// import Load from "../load/Load";
+import Card from "../card/Card";
 
-// const products = [
-//   {
-//     id: 1,
-//     nombre: "Killer",
-//     fechaPerdida: "23/02/2022",
-//     lugarPerdiad: "parque",
-//     descripcion: "perro labrador",
-//     photo: "foto.jpg",
-//   },
-// ];
-// const columns = [
-//   {
-//     dataField: "_id",
-//   },
-//   {
-//     dataField: "nombre",
-//   },
-//   {
-//     dataField: "fechaPerdida",
-//   },
-//   {
-//     dataField: "lugarPerdida",
-//   },
-//   {
-//     dataField: "descripcion",
-//   },
-//   {
-//     dataField: "photo",
-//   },
-// ];
-export default class home extends React.Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // rows: [],
-    };
+    this.state = {};
   }
   // componentDidMount() {
-  //   this.getData();
-  // }
-  // getData() {
   //   request
   //     .get(this.props.url)
   //     .then((response) => {
-  //       this.setState({ rows: response.data });
+  //       this.setState({ card: response.data });
+  //       // console.log(response.data);
   //     })
   //     .catch((err) => {
   //       console.log(err);
   //     });
   // }
+
   render() {
     return (
       <>
@@ -84,7 +52,16 @@ export default class home extends React.Component {
             </section>
             {/* Cards */}
             <section className="cards-ads" id="cards-ads">
-              <Load />
+              {}
+              <Card
+              // url="/mascotas"
+              // key={this.mascota._id}
+              // nombre={this.props.nombre}
+              // fecha_Perdida={this.props.fechaPerdida}
+              // lugar_Perdida={this.props.lugarPerdida}
+              // descripcion={this.props.descripcion}
+              // foto={this.props.foto}
+              />
 
               {/* <article className="card-pet">
                 <img src={CardImg} alt="img"></img>

@@ -11,7 +11,7 @@ export default class nav extends React.Component {
   render() {
     return (
       <nav className="nav">
-        <a href="../beginning">
+        <a href="../home">
           <img src={Logo} alt="logo" />
         </a>
         <input type="checkbox" id="menu-check" />

@@ -15,8 +15,8 @@ export default class Add extends React.Component {
       loading: false,
       mascota: {
         nombre: "",
-        fechaPerdida: "",
-        lugarPerdiad: "",
+        fecha_Perdida: "",
+        lugar_Perdiad: "",
         descripcion: "",
         foto: "",
       },
@@ -30,6 +30,7 @@ export default class Add extends React.Component {
         [home]: value,
       },
     });
+    console.log(home, value);
   }
   crearMascota() {
     this.setState({ loading: true });

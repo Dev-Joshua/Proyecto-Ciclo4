@@ -6,17 +6,26 @@ import "./card.css";
 export default class Card extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { card: [] };
+    this.state = {
+      mascota: {
+        nombre: "",
+        fecha_Perdida: "",
+        lugar_Perdida: "",
+        descripcion: "",
+        foto: "",
+      },
+    };
   }
+
   componentDidMount() {
     this.getData();
   }
   getData() {
     request
-      .get(this.props.url)
+      .get("/mascotas", this.state.mascota)
       .then((response) => {
+        this.setState({ mascota: response.data });
         console.log(response.data);
-        this.setState({ card: response.data });
       })
       .catch((err) => {
         console.log(err);
@@ -25,21 +34,18 @@ export default class Card extends React.Component {
   render() {
     return (
       <>
-        <article className="card-pet" data={this.state.card}>
+        <article className="card-pet">
           <img src={process.env.PUBLIC_URL + this.props.foto} alt="img" />
           <div className="card-body">
-            <h3>{this.props.nombre}</h3>
-            <table data={this.state.card}>
+            <h1>Leido</h1>
+            <h3>nombre{this.props.nombre}</h3>
+            <table>
               <tbody>
                 <tr>
-                  <td>{this.props.fechaPerdida}</td>
+                  <td>{this.props.fecha_Perdida}</td>
                 </tr>
                 <tr>
-                  <td>
-                    {this.props.lugarPerdida}
-                    {/* <br />
-                      Ultima vez visto: Por fundadores */}
-                  </td>
+                  <td>{this.props.lugar_Perdida}</td>
                 </tr>
                 <tr>
                   <td>{this.props.descripcion}</td>
@@ -63,22 +69,22 @@ export default class Card extends React.Component {
                       />
                     </div>
                     {/* <ul>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-facebook-f"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-instagram"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" target="_blank">
-                                <i className="fab fa-whatsapp"></i>
-                              </a>
-                            </li>
-                          </ul> */}
+                          <li>
+                            <a href="#" target="_blank">
+                              <i className="fab fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" target="_blank">
+                              <i className="fab fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" target="_blank">
+                              <i className="fab fa-whatsapp"></i>
+                            </a>
+                          </li>
+                        </ul> */}
                   </div>
                 </div>
               </div>
